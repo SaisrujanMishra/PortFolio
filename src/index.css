@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-secondary font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+
+  .accent-border {
+    @apply border border-accent-gold/30;
+  }
+
+  .interactive-card {
+    @apply bg-primary-light rounded-lg p-6 accent-border
+           transition-all duration-300 hover:shadow-hover;
+  }
+
+  .accent-button {
+    @apply px-6 py-3 rounded-lg bg-accent-blue/10 text-secondary
+           border border-accent-blue/30 hover:bg-accent-blue/20
+           transition-all duration-300 font-medium;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold mb-8 text-center;
+  }
+
+  .profile-image {
+    @apply rounded-full border-4 border-accent-gold/30
+           shadow-accent transition-all duration-300
+           hover:border-accent-gold/50 hover:shadow-hover;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1 rounded-full text-sm font-medium
+           bg-primary-light border border-accent-bronze/30
+           hover:border-accent-bronze/50 transition-colors duration-300;
+  }
+}
